@@ -79,9 +79,11 @@ console.log(firstEqual('a', ("amarillo", "azul", "amaranto", "aguamarina")));
 // console.log(colorsA, colors
 
 // searchInStringV1
-// console.log("Exercise searchInStringV1:")
-// const searchInStringV1 = (string, character) => Array.from(string).reduce( =>, 0);
-// console.log(searchInStringV1(string1, 'a'));
+console.log("Exercise searchInStringV1:")
+const searchInStringV1 = (string, character) => Array.from(string)
+    .filter(letter => letter === character)
+    .reduce((sumCharacter) => (sumCharacter + 1), 0);
+console.log(searchInStringV1(string1, 'a'));
 
 // searchInStringV2
 console.log("Exercise searchInStringV2:")
