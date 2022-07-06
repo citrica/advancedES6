@@ -13,6 +13,7 @@ const colorsA = ["amarillo", "azul", "amaranto", "aguamarina"];
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
 const string1 = "Amarilloverderojoazulrosa";
 
+
 // hasId
 console.log("Exercise hasId:")
 const hasId = ({ id: userId }) => (userId ? true : false);
@@ -69,14 +70,20 @@ console.log(swapFirstSecond(teachers));
 // No he conseguido hacerlo sin el [0]
 console.log("Exercise firstEqual:")
 const firstEqual = (character, ...strings) => strings.every(string => (string[0] === character));
-console.log(firstEqual('a', ("amarillo", "verde", "rojo", "azul", "rosa")));
-console.log(firstEqual('a', ("amarillo", "azul", "amaranto", "aguamarina")));
-
+console.log(firstEqual('a', 'amarillo', 'verde', 'rojo', 'azul', 'rosa'));
+console.log(firstEqual('a', 'amarillo', 'azul', 'amaranto', 'aguamarina'));
 
 // longest
-// console.log("Exercise longest:")
-// const longest = ([...myArray]) => myArray.XXXX
-// console.log(colorsA, colors
+// No he conseguido hacerlo con "find"
+console.log("Exercise longest:");
+const longest = (...myArray) => {
+    let longest = myArray
+        .map(a => a.length)
+        .indexOf(Math.max(...myArray.map(a => a.length)))
+    return myArray[longest]
+};
+console.log(longest(colorsA, numbers));
+console.log(longest(colors, colorsA))
 
 // searchInStringV1
 console.log("Exercise searchInStringV1:")
